@@ -1,0 +1,10 @@
+<h3>Pass image from Parent to Child Component -</h3>
+<img [src]="childImgUrl" alt="" width="400" height="250" /> <br />
+
+<hr />
+<ng-content></ng-content><!-- content projection --> 
+<hr />
+
+<button (click)="imgSelected.emit(parentImgUrl)"> <!-- emmiting image url in child to parent app component -->
+  Pass image from Child to Parent Component
+</button>

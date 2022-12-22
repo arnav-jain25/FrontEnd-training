@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Reversal</title>
+
+    <script>
+        const arr=new Array()
+        const n=prompt('Enter the size of the array')
+        for(var i=0;i<n;i++){
+            arr[i]=prompt('Enter array elements')
+        }
+        const rev=[]
+        for(var i=0;i<n;i++){
+            rev[i]=arr.pop()
+        }
+        console.log(rev);
+
+    </script>
+
+
+</head>
+<body>
+    <h2>Array Reversal</h2>
+</body>
+</html>

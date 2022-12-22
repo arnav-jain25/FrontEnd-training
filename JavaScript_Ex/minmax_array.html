@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinMax</title>
+
+    <script>
+        var min=99999
+        var max=-99999
+        function Min(arr, n){
+            for(var i=0;i<n;i++){
+                if(arr[i]<min){
+                    min=arr[i]
+                }
+            }
+            console.log(min);
+        }
+
+        function Max(arr, n){
+            for(var i=0;i<n;i++){
+                if(arr[i]>max){
+                    max=arr[i]
+                }
+            }
+            console.log(max);
+        }
+        const arr=new Array()
+        const n=+prompt('Enter the size of the array')
+        for(var i=0;i<n;i++){
+            arr[i]=+prompt('Enter array elements')
+        }
+
+        console.log('Minimum Element is ');
+        Min(arr,n)
+        console.log('Maximum Element is ');
+        Max(arr,n)
+    </script>
+
+</head>
+<body>
+    <h2>Find minimum and maximum element in an array</h2>
+</body>
+</html>

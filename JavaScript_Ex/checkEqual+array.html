@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check equal array</title>
+
+    <script>
+        const s1=new Array()
+        const n=+prompt('Enter the size of the array 1')
+        for(var i=0;i<n;i++){
+            s1[i]=prompt('Enter array elements')
+        }
+
+        const s2=new Array()
+        const m=+prompt('Enter the size of the array 2')
+        for(var i=0;i<m;i++){
+            s2[i]=prompt('Enter array elements')
+        }
+
+        if(m==n){
+            var flag=0
+            for(var j=0;j<n;j++){
+                if(s1[j]==s2[j]){
+                    flag=1
+                }
+                else{
+                    flag=0
+                    break
+                }
+            }
+            if(flag==1){
+                console.log('Arrays are equal')
+            }
+            else{
+                console.log('Arrays are not equal')
+            }
+        }
+        else{
+            console.log('Arrays are not equal')
+        }
+    </script>
+
+</head>
+<body>
+    <h3>Check equal array</h3>
+</body>
+</html>

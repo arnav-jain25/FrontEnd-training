@@ -1,0 +1,54 @@
+<div>
+  <h1>Practice Application</h1>
+
+  <!-- structural directive ngFor -->
+  <p *ngFor="let num of numList" id="array">{{ num }}&nbsp;</p>
+  <br />
+  <hr />
+  <!-- structural directive ngIf -->
+  <p *ngIf="blueClass; else greenButton">Button is blue</p>
+  <ng-template #greenButton>
+    <p>Button is green</p>
+  </ng-template>
+  <!-- attribute directives ngClass and ngStyle -->
+  <button
+    (click)="blueClass = !blueClass"
+    [ngClass]="{ blue: blueClass == true, green: blueClass == false }"
+    [ngStyle]="{ 'font-size.px': fontSize }"
+  >
+    Change Color
+  </button>
+
+  <hr />
+  <!-- pipe function doesn't change the value of the variable in a class, it just transforms the output value -->
+  <p>{{ name | titlecase }}</p>
+  <!-- pipe function to displat text as a Title -->
+  <p>{{ name }}</p>
+  <p>{{ currentDate | date: "short" }}</p>
+  <p>{{ cost | currency: "INR" }}</p>
+  <p>{{ temperature | number: "3.1-2" }}</p>
+  <!-- x.y-z => x=length of whole part, y=min length of decimal part, z=max length of decimal part  -->
+  <p>{{ pizza | json }}</p>
+  <!-- helpful at the time of debugging -->
+
+  <hr />
+  <img [src]="imgUrl1" alt="" width="400" height="250" />
+  <!-- property binding at imgUrl2 -->
+  <br /><br />
+  <!-- event binding at imgUrl2 and changeImage fn -->
+  <input
+    type="text"
+    name="image"
+    id="image"
+    (keyup)="changeImage($event)"
+    [value]="imgUrl2"
+  /><br />
+  <img [src]="imgUrl2" alt="" width="400" height="250" />
+  <br /><br />
+  <app-child [child]="img" (imgSelected)="logImg($event)">
+    <p>Depiction of the concept of content projection</p>
+  </app-child>
+  <br />
+  <!-- parent to child and child to parent data -->
+  <img *ngIf="flag == 1" [src]="fromChildImg" alt="" width="400" height="250" />
+</div>

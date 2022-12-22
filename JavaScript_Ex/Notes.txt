@@ -1,0 +1,155 @@
+JavaScript is a dynamically typed language
+-------------------------
+
+var x=10; (number)
+x=2.4; //true (number)
+x="10" //true (string)
+x=true //true (boolean)
+
+Java is statically typed language
+-------------------------
+
+int x=10;
+x=2.4; //error
+x="10" //error
+x=true //error
+
+
+-------------------------
+JavaScript Operators:
+   	--------
+	1. Arithmetic Operators -
+		+, -, *, /, %, **
+		var a=10; var b=20
+		a+b=30
+		a-b=-10
+		a*b=200
+		a/b=0.5
+		a%b=10
+		a**b=100000000000000000000	
+	--------
+	2. Comparision Operators -
+		<, <=, >, >=, == (Checks only value), !=, === (Checks value and type)
+		10=="10" //true
+		10==="10" //false
+	--------
+	3. Logical Operators -
+		&&(AND), ||(OR), !(NOT)
+		t && t ==> true, t && f ==> false, f && t ==> false, f && f ==> false
+		t || t ==> true, t || f ==> true, f || t ==> true, f || f ==> false
+		-->Non-Zero values are treated as true and ZERO is treated as false.
+		-->Empty string is false
+		-->Null, undefined NaN is false
+	--------
+----------------------
+Conditional Statements -
+	if, if else, else if
+----------------------
+Iterative Statements -
+	while loop, for loop
+----------------------
+Functions -
+	Reusability of the code. Same function can be called n nuber of times throughout the code.
+	Syntax -
+		function funcName(arguments){
+			//body
+			return value
+		}
+----------------------
+JavaScript Scopes -
+	1. Global Scope
+	2. Local Scope
+
+	NOTE - Never use VAR. Always use CONST. If you need to reassign value, then use LET
+----------------------
+Higher Order Functions -
+	We can pass a function as an argument to another function. A function can return another function.
+	Example -
+	----------
+	1. setInterval()
+----------------------
+Anonymous Functions -
+	Functions without a funcname. Example: function()
+
+----------------------
+JavaScript Arrays -
+	Indexed collection of items in a single variable.
+	Syntax to define - var nums= [1,2,3,4,5]
+	----------
+	Accessing Array values -
+		Example: const names= ['A', 'Aa', 'Aaa', 'Aaaa']
+
+	----------
+	Creating empty Array -
+		const arr=[]
+		const arr=new Array()
+	----------
+	Length of Array -
+		arr.length
+	----------
+NOTE - JavaScript arrays can hold heterogeneous values.
+	Example: const arr=[10,'Abc',true, null, 87]
+	----------
+	Important methods -
+		1. push(): To add element to the end of the array. 
+		After adding the element, it returns the new length of the array.
+		----------
+		2. pop(): Removes the element present on the last index of the array.
+		After removing the element, it returns the popped element value.
+		----------
+		3. unshift(): To add an element to the begining of the array.
+		----------
+		4. shift(): To remove the first element of the array.
+		----------
+		5. indexOf(): To find the index of a specific element in the array.
+		If the element is present multiple times then it returns index of first occurence.
+		If the element is not present, then -1 is returned.
+		----------
+		6.slice(begin(included), end(excluded) ): returns sub array in the given range.
+			slice() returns the same array. Used for cloning.
+------------------------
+Deleting array element in a given index - 
+	splice():
+		arrayObj.splice(index,numOfElemnets)
+
+===========================================
+Book Management System -
+	1. Prompt Message - Operation [Add, Delete, List, Exit]
+===========================================
+JavaScript Objects -
+	To represent a group of key-value pairs then we should use Objects.
+
+	Arrays: A group of individual Objects
+	Object: A group of key-value pairs
+
+	Syntax -
+		Array representation: const arr[]
+		Object representation: var  varName={	key1: value1,
+												key2: value2,
+												key3: value3,
+												---------
+												---------
+												keyN: valueN,
+											}
+	Example -
+		var movies{
+			"name": "Forest Gump", "actor": "Tom Hanks", "date": "19-08-2022"
+		}
+	------------
+	Accessing values of Objects -
+		obj["key"] (or) obj.key
+	------------
+	Creating & Initializing JS Objects -
+		Empty Object -
+			var obj={} (or) var obj=new Object()
+			Adding key-value pair to an empty object:
+				obj["prop"]="value" (or) obj.prop=value
+			
+------------------------
+DOM(Document Object Model) -
+	1. document.getElementById() = Returns element associated with the specified Id.
+	2. document.getElementsByClassName() = Returns list of all elements specified by the ClassName.
+	3. document.getElementsByTagName() = Returns list of all elements specified by the TagName.
+	4. document.querySelector() = Returns the first object matching CSS Style Selector.
+	5. document.querySelectorAll() =Returns all object which matches CSS Style Selector.
+		

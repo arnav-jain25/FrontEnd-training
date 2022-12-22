@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Element in Array</title>
+
+    <script>
+        const arr=new Array()
+        const n=+prompt('Enter the size of the array')
+        for(var i=0;i<n;i++){
+            arr[i]=prompt('Enter array elements')
+        }
+        const ele=+prompt('Enter the element you want to search')
+
+        var flag=0
+        for(var i=0;i<n;i++){
+            if(arr[i]==ele){
+                console.log('Element found on location '+ (i+1));
+                flag=1
+            }
+        }
+        if(flag==0){
+            console.log('Element not found');
+        }
+
+    </script>
+
+</head>
+<body>
+    <h2>Searching an element in an array</h2>
+</body>
+</html>

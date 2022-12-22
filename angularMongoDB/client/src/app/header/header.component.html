@@ -1,0 +1,52 @@
+<header>
+    <nav class="navbar navbar-expand-lg" style="text-align: center;">
+        <div class="container-fluid">
+            <a class="navbar-brand" (click)="goToDashboard()" routerLink="/dashboard/">
+                <img src="favicon.ico" alt="" width="30" height="24">
+            </a>
+            <a class="navbar-brand" (click)="goToDashboard()" routerLink="/dashboard/">AngularCRUD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- -------------------Left side navigation menu items - dashboard, personal details ------------------------ -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="goToDashboard()" routerLink="/dashboard/">Dashboard
+                            <i class="bi-book-half"></i>
+                        </a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="goToPersonalDetails()" routerLink="/personalDetails/">Personal Details
+                            <i class="bi-person-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- -------------------------Right side navigation menu item - login/logout, about us--------------------------- -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 34%">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="removeAccount()">Delete Account
+                            <i class="bi-bank"></i>
+                        </a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="goToAboutUs()" routerLink="/aboutus/">About Us
+                            <i class="bi-people-fill"></i>
+                        </a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" (click)="logoutUser()">LogOut
+                            <i class="bi-door-open-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

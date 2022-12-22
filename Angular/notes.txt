@@ -1,0 +1,18 @@
+Installation of Angular CLI Tool - 
+ >npm install -g angular/cli
+
+--------------------
+Checking installed tool -
+    >ng version
+
+--------------------
+Creating new angular application -
+    >ng new <app-name>-app
+
+--------------------
+Running application -
+    >ng serve
+    >ng serve -o
+    >npm start
+
+--------------------

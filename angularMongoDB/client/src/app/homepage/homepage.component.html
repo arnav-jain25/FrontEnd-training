@@ -1,0 +1,192 @@
+<!-- --------------------Header when user not logged in--------------------------- -->
+<header>
+    <nav class="navbar navbar-expand-lg" style="text-align: center;">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="/">
+                <img src="favicon.ico" alt="" width="30" height="24">
+            </a>
+            <a class="navbar-brand" routerLink="">AngularCRUD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- -------------------------Right side navigation menu item - login/logout, about us--------------------------- -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 70%">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLink="">About Us
+                            <i class="bi-people-fill"></i>
+                        </a>
+                    </li>&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLink="/login">LogIn
+                            <i class="bi-door-open-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<!-- ------------------------Welcome Header------------------------- -->
+<br><br>
+
+<div class="row">
+    <h1>Wecome to AngularCRUD!</h1>
+    <hr>
+    <h5><em>Manage all your personal details right here</em></h5>
+</div>
+
+
+<br><br>
+<div class="container">
+    <div class="wrapper">
+
+        <!-- -------------------------Left Side content------------------------------- -->
+        <div class="left-side">
+            <br>
+            <img src="assets\homepage.png" alt="" width="200" height="200"><br><br><br><br>
+            <h2>About Us</h2><br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium odio eum suscipit rerum placeat id,
+                aliquam ipsum sapiente libero nesciunt doloribus optio non laboriosam voluptates repellat autem ut,
+                blanditiis tempora rem fuga dignissimos sit similique? Tenetur quo, facilis doloribus repellat
+                reiciendis
+                cupiditate! Id labore facere eveniet magnam eligendi? Maxime, aliquam. Veniam cumque magnam illo sequi
+                rem
+                numquam architecto, ipsam, sapiente nobis tenetur tempora, minus dicta. Cumque cupiditate quod sed quae
+                in
+                dicta doloribus expedita blanditiis enim et vel necessitatibus exercitationem molestias iusto beatae
+                voluptates earum doloremque veniam maiores nesciunt ullam deserunt voluptate, illo nostrum! Aliquam
+                architecto quae animi illum, laudantium aliquid eos vitae molestias quam reprehenderit exercitationem
+                ex,
+                nesciunt quibusdam.</p>
+        </div>
+
+        <!-- ---------------------------Right side content-------------------------------- -->
+        <div class="right-side">
+            <br>
+            <!-- ----------------------------Registration Form------------------------------ -->
+            <h2>Come Join Us <i class="bi-emoji-smile"></i></h2><br><br>
+            <form action="" #regForm="ngForm">
+                <label for="regName">Name - </label>
+                <input type="text" name="regName" id="regName" class="form-control" placeholder="Ex: John Doe"
+                    [(ngModel)]="userDetail.name" required><br>
+                <label for="regEmail">Email ID - </label>
+                <input type="email" name="regEmail" id="regEmail" class="form-control"
+                    placeholder="Ex: john.doe@email.com" [(ngModel)]="userDetail.email" required><br>
+                <label for="regPwd">Password - </label>
+                <input type="password" name="regPwd" id="regPwd" class="form-control" placeholder="Ex: **********"
+                    [(ngModel)]="userDetail.password" required><br>
+                <label for="regPhone">Phone No. - </label>
+                <input type="text" name="regPhone" id="regPhone" class="form-control" placeholder="Ex: 9876543210"
+                    [(ngModel)]="userDetail.phone" required><br>
+                <label for="regDob">Date of Birth - </label>
+                <input type="date" name="regDob" id="regDob" class="form-control" required
+                    [(ngModel)]="userDetail.dob"><br>
+                <label for="regGender">Gender - </label>&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="regGender" id="male" value="Male" [(ngModel)]="userDetail.gender">Male
+                <input type="radio" name="regGender" id="female" value="Female" [(ngModel)]="userDetail.gender">Female
+                <input type="radio" name="regGender" id="na" value="NA"
+                    [(ngModel)]="userDetail.gender">Prefer not to disclose <br><br>
+                <label for="image"> Profile Photo - </label>&nbsp;&nbsp;&nbsp;
+                <input type="file" (change)="OnFileSelected($event)"><br><br>
+                <img [src]="userDetail.photo" width="100px" height="100px"
+                    style="vertical-align: middle; border-radius: 100%; border: 3px solid darkcyan;"><br><br>
+
+
+                <input type="button" value="Register Now!" class="btnReg" (click)="addUserToDatabase(userDetail)"
+                    [disabled]="!regForm.form.valid"><br><br>
+                <nav>
+                    <a routerLink="/login">Already a User? Login Now!</a>
+                </nav>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- {{userDetail | json}} -->
+<br><br>
+
+
+
+<!-- --------------------Footer when user not logged in--------------------------- -->
+<footer>
+    <div class="my-container">
+        <br>
+        <div class="container">
+
+            <!-- --------------------------------Footer Top - Navigation Menu--------------------------------- -->
+            <div class="row">
+                <div class="col">
+                    <h6 class="footer-top">
+                        <a routerLink="" class="btn">Dashboard
+                            <i class="bi-house-fill"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div class="col">
+                    <h6 class="footer-top">
+                        <a routerLink="" class="btn">Personal Details
+                            <i class="bi-person-fill"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div class="col">
+                    <h6 class="footer-top">
+                        <a routerLink="" class="btn">About Us
+                            <i class="bi-people-fill"></i>
+                        </a>
+                    </h6>
+                </div>
+            </div>
+
+            <!-- -----------------------------------Footer Middle - Contact Details---------------------------- -->
+            <hr style="border:2px solid darkred; background-color: darkred;">
+            <div class="row" id="footer-middle">
+                <h5 style="font-weight: 500">Contact Us - </h5>
+                <div style="text-align:center;" class="col">
+                    <h6 class="footer-middle-items">Ph No. - 9876543210
+                        <i class="bi-telephone-fill"></i>
+                    </h6>
+                </div>
+                <div style="text-align: center;" class="col">
+                    <h6 class="footer-middle-items">angularcrud@email.com
+                        <i class="bi-envelope-fill"></i>
+                    </h6>
+                </div>
+
+                <div style="text-align: center;" class="col">
+                    <h6 class="footer-middle-items">angularcrud@facebook
+                        <i class="bi-facebook"></i>
+                    </h6>
+                </div>
+
+                <div style="text-align: center;" class="col">
+                    <h6 class="footer-middle-items">angularcrud@instagram
+                        <i class="bi-instagram"></i>
+                    </h6>
+                </div>
+
+                <div style="text-align: center;" class="col">
+                    <h6 style="font-weight: 300; border-right: 0ch;">angularcrud@linkedin
+                        <i class="bi-linkedin"></i>
+                    </h6>
+                </div>
+
+                <!-- ---------------------------------Footer Bottom - Rights & Creator details------------------------------ -->
+            </div>
+            <hr style="border:2px solid darkred; background-color: darkred;">
+            <div class="row" id="footer-bottom">
+                <p style="text-align: center;">All rights are reserved &copy; 2022.
+                </p>
+                <p style="color: whitesmoke;">
+                    AngularCRUD- ArnavJain
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

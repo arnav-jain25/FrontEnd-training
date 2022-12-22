@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <script>
+        /*
+        function hello(){
+            console.log('Hello Everyone')
+            return
+        }
+        for(var i=0; i<5; i++){
+            hello()
+        }
+        */
+
+
+       /*
+        function greetings(name='John Doe'){
+        console.log('Hello '+name+', How are you?')
+       }
+       var x=prompt('Enter your name')
+       greetings(x)
+       greetings();
+       */
+
+
+      function factorial(i=1){
+        var res=i
+        while(i>1){
+            res=res*(i-1)
+            i--
+        }
+        return res
+      }
+      var num=prompt('Enter a no.')
+      var fact=factorial(num)
+      console.log(fact)
+      console.log(factorial())
+    </script>
+</head>
+<body>
+    <!--Print hello multiple times-->
+    <!--Argument without return example-->
+    <!--Factorial of a number-->
+</body>
+</html>

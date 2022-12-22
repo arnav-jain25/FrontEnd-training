@@ -1,0 +1,13 @@
+1. To create a new application -
+	npx create-react-app <app-name>
+-------------------------
+
+2. To start a react application -
+	npm start
+-------------------------
+3. React -
+	React is a declarative, efficient, and flexible JavaScript library for 
+	building user interfaces. It lets you compose complex UIs from small and 
+	isolated pieces of code called “components”.
+-------------------------
+4. 

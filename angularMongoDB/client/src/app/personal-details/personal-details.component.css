@@ -1,0 +1,44 @@
+h1 {
+    color: rgb(133, 169, 3);
+}
+
+h5 {
+    color: rgb(208, 56, 29);
+}
+
+.btnEdit {
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 3px;
+    background-color: rgb(29, 88, 88);
+}
+
+.btnEdit:hover {
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 3px;
+    background-color: rgb(133, 169, 3);
+}
+
+form{
+    color: rgb(29, 88, 88);
+    font-weight:500;
+}
+
+#profileForm{
+    width: 50%;
+    padding: 75px;
+    background: #f2f2f2;
+    text-align: center;
+    box-shadow: 5px 4px rgb(29, 88, 88), -1em 0 .4em olive;
+}
+
+input{
+    background-color: transparent;
+    border: 3px solid olive;
+}
+
+#name, #email, #phNo, #dob, #pwd{
+    width: 50%;
+    margin-left: 25%;
+}

@@ -1,0 +1,38 @@
+
+<app-header></app-header>
+
+<br><br><br><br>
+<div class="container text-center" id="profileForm">
+    <h1>Update Personal Details</h1>
+    <br>
+    <!-- ---------------------Form fields to update personal details--------------------- -->
+    <form action="" #updateForm="ngForm">
+        <label for="Name">Name - </label>
+        <input type="text" name="name" id="name" class="form-control" [(ngModel)]="userDetail.name" required>
+        <label for="email">Email ID - </label>
+        <input type="text" name="email" id="email" class="form-control" [(ngModel)]="userDetail.email" required>
+        <label for="pwd">Password - </label>
+        <input type="password" name="pwd" id="pwd" class="form-control" [(ngModel)]="userDetail.password" required>
+        <label for="phNo">Phone No. - </label>
+        <input type="text" name="phNo" id="phNo" class="form-control" [(ngModel)]="userDetail.phone" required>
+        <label for="dob">Date of Birth - </label>
+        <input type="date" name="dob" id="dob" class="form-control" [(ngModel)]="userDetail.dob" required> <br>
+        <label for="gender">Gender - </label>&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" id="male" value="Male" [(ngModel)]="userDetail.gender">Male
+        <input type="radio" name="gender" id="female" value="Female" [(ngModel)]="userDetail.gender">Female
+        <input type="radio" name="gender" id="na" value="NA" [(ngModel)]="userDetail.gender">Prefer not to disclose
+        <br><br>
+        <label for="image"> Profile Photo - </label>&nbsp;&nbsp;&nbsp;
+                <input type="file" (change)="OnFileSelected($event)"><br><br>
+                <img [src]="userDetail.photo" width="100px" height="100px"
+                    style="vertical-align: middle; border-radius: 100%; border: 3px solid darkcyan;"><br>
+        <!-- <label for="image">Profile Photo - </label>&nbsp;
+        <input type="file" name="image" id="image" [(ngModel)]="userDetail.photo" required> -->
+    </form>
+
+    <br><br>
+    <input type="button" value="Update Profile" class="btnUpdate" (click)="updateUserData(userDetail)"><br><br>
+</div>
+<br><br>
+
+<app-footer></app-footer>

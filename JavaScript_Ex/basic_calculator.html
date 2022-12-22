@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+
+    <script>
+        function Add(x, y) {
+            return +(x + y)
+        }
+        function Subtract(x, y) {
+            return x - y
+        }
+        function Multiply(x, y) {
+            return x * y
+        }
+        function Divide(x, y) {
+            return x / y
+        }
+        function Power(x, y) {
+            return x ** y
+        }
+
+        const op1 = +prompt('Enter a operand 1')
+        const op2 = +prompt('Enter a operand 2')
+        const oper = prompt('Enter the operation you would like to perform on the operands')
+        var ans = null;
+
+        if (oper == '+') {
+            ans = Add(op1, op2)
+            console.log(op1 + oper + op2 + '=' + ans)
+        }
+        else if (oper == '-') {
+            ans = Subtract(op1, op2)
+            console.log(op1 + oper + op2 + '=' + ans)
+        }
+        else if (oper == '*') {
+            ans = Multiply(op1, op2)
+            console.log(op1 + oper + op2 + '=' + ans)
+        }
+        else if (oper == '/') {
+            ans = Divide(op1, op2)
+            console.log(op1 + oper + op2 + '=' + ans)
+        }
+        else if (oper == '**') {
+            ans = Power(op1, op2)
+            console.log(op1 + oper + op2 + '=' + ans)
+        }
+        else {
+            console.log('Operation cannot be performed')
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <h3>Basic Calculator Example</h3>
+</body>
+
+</html>

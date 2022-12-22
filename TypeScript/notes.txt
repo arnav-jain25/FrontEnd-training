@@ -1,0 +1,89 @@
+Node JS -
+----------------
+Node.js is a JavaScript runtime built on chrome's V8 JavaScript engine
+
+Checking installation -
+----------------
+>node -v
+v16.24.2
+
+>npm -v
+v8.5.0
+
+Typescript -
+----------------
+-> It is an open script programming language created by Microsoft.
+-> Superscript of javascript
+	TypeScript = JavaScript + ES6 + ES7 + Types
+
+Installing typescript -
+----------------
+npm install -g typescript
+
+>tsc -v
+v4.7.4
+
+Compile typescript - 
+----------------
+>tsc fileName.ts
+
+Run javascript - 
+----------------
+>node fileName.js
+
+To compile the file once and run it mutiple times w/o having to compile again and again -
+----------------
+>tsc fileName.ts --watch
+
+================
+1. Cannot redeclare variable in TypeScript
+2. If type is assigned to a variable at the time of declaration, 
+	a value of another type cannot be assigned to the same variable.
+
+Array creation -
+----------------
+let arr1: number[]=[1,2,3,4,5]  (or) let arr1:Array<number>=[1,2,3,4,5]
+
+Tupple creation -
+----------------
+let arr: [number,string, boolean] = [1,'Hello', false];
+
+enum -
+----------------
+//enum
+enum day{mon='day1', tue='day2', wed='day3', thu='day4', fri='day5', sat='day6', sun='day7'}
+let d=day.thu
+console.log(d); //answer is day4
+**you can use a mix of numbers and strings in an enum list
+
+null & undefined -
+----------------
+null & undefined type variables cannot be assigned another type value and vice versa.
+
+any type -
+----------------
+let randVal:any
+randVal='Hello'
+console.log(randVal); //Hello
+randVal=7
+console.log(randVal); // 7
+randVal=null
+console.log(randVal); // null
+randVal=undefined
+console.log(randVal); //undefined
+
+multi type -
+----------------
+let mtype: string|number
+mtype='John'
+console.log(mtype); //John
+mtype=43
+console.log(mtype); //43
+
+let multitype: boolean|string|number
+multitype='Doe'
+console.log(multitype); // Doe
+multitype=false
+console.log(multitype); //false
+multitype=25
+console.log(multitype); //25

@@ -1,0 +1,11 @@
+header{
+    background-color: rgb(29, 88, 88);
+}
+li a:hover{
+    background-color: cadetblue;
+    color: whitesmoke;
+}
+
+.navbar-brand{
+    color: whitesmoke;
+}

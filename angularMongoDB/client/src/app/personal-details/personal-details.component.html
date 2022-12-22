@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<br><br><br><br>
+
+<div class="container" id="profileForm">
+    <h1>My Personal Details</h1>
+    <br>
+    <form #details="ngForm">
+        <!-- <img src={{userDetail.photo}} alt="" style="width: 100px; height:100px"><br><br> -->
+        <img [src]="userDetail.photo" width="100px" height="100px"
+            style="vertical-align: middle; border-radius: 100%; border: 3px solid darkcyan;"><br><br>
+        <label for="Name">Name - </label>
+        <input type="text" name="name" id="name" class="form-control" value={{userDetail.name}} readonly>
+        <label for="email">Email ID - </label>
+        <input type="text" name="email" id="email" class="form-control" value={{userDetail.email}} readonly>
+        <label for="pwd">Password - </label>
+        <input type="password" name="pwd" id="pwd" class="form-control" value={{userDetail.password}} readonly>
+        <label for="phNo">Phone No. - </label>
+        <input type="text" name="phNo" id="phNo" class="form-control" value={{userDetail.phone}} readonly>
+        <label for="dob">Date of Birth - </label>
+        <input type="text" name="dob" id="dob" class="form-control" value={{userDetail.dob}} readonly><br>
+        <label for="gender">Gender - </label>&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" id="male" value="Male" [(ngModel)]="userDetail.gender" disabled="true">Male
+        <input type="radio" name="gender" id="female" value="Female" [(ngModel)]="userDetail.gender"
+            disabled="true">Female
+        <input type="radio" name="gender" id="na" value="NA" [(ngModel)]="userDetail.gender" disabled="true">Prefer not
+        to disclose <br><br>
+    </form>
+
+
+    <br><br>
+    <input type="button" value="Edit Profile" class="btnEdit" (click)="goToEditProfile()"><br><br>
+</div>
+<br><br>
+
+<app-footer></app-footer>
